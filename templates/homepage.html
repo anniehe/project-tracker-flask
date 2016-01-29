@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+    <title>Homepage</title>
+</head>
+<body>
+    <h1>Welcome!</h1>
+
+    {% if students %}
+        <h2>Students</h2>
+        <ul>
+            {% for student in students %}
+                <li><a href="/student?github={{ student[2] }}">{{ student[0] }} {{ student[1] }}</a></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+</body>
+</html>
